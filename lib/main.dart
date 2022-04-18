@@ -42,7 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
             crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
-                child:  StreamBuilder<RemoteState2>( // sử dụng StreamBuilder để lắng nghe Stream <=== new
+                child:  StreamBuilder<RemoteState2>( // sử dụng StreamBuilder để lắng nghe Stream
                   stream: bloc.stateController2.stream, // truyền stream của stateController2 vào để lắng nghe <=== new
                   initialData: bloc.state2, // giá trị khởi tạo chính là kenh hiện tại <=== new
                   builder: (BuildContext context, AsyncSnapshot<RemoteState2> snapshot) {
