@@ -43,8 +43,8 @@ class _MyHomePageState extends State<MyHomePage> {
           children: [
             Container(
                 child:  StreamBuilder<RemoteState2>( // sử dụng StreamBuilder để lắng nghe Stream <=== new
-                  stream: bloc.stateController2.stream, // truyền stream của stateController vào để lắng nghe <=== new
-                  initialData: bloc.state2, // giá trị khởi tạo chính là volume 70 hiện tại <=== new
+                  stream: bloc.stateController2.stream, // truyền stream của stateController2 vào để lắng nghe <=== new
+                  initialData: bloc.state2, // giá trị khởi tạo chính là kenh hiện tại <=== new
                   builder: (BuildContext context, AsyncSnapshot<RemoteState2> snapshot) {
                     return Text('kenh hiện tại: ${snapshot.data?.kenh}');// update UI <=== new
                   },
@@ -59,7 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
             return Text('Âm lượng hiện tại: ${snapshot.data?.volume}');// update UI <=== new
           },
         ),),
-            
+
           ]
         ),
       ),
